@@ -1,5 +1,5 @@
 //alert("Hello! I am an alert box!!");
 
-myFunction(){
+function myFunction(){
   alert("Hi!");
 }
