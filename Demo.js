@@ -7,14 +7,20 @@ function ShowRestaurants(){
   document.getElementById("restaurants").innerHTML = restaurants;
 }
 
-function getname(){
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var combined = fname + lname;
-  console.log(fname);
-  console.log(lname);
+function getinput1(){
+  var input1 = document.getElementById("input1").value;
+  var input2 = document.getElementById("input2").value;
+
+  // if (input1 == "" || input1 == null) {
+  if (input1 < 5 || input1 > 7) {
+
+    alert("Enter something for input1.")
+  }
+  var combined = input1 + " " + input2;
+  console.log(input1);
+  console.log(input2);
   console.log(combined);
-  document.getElementById("FNameResult").innerHTML = fname;
+  document.getElementById("Input1Result").innerHTML = input1;
   document.getElementById("CombinedResult").innerHTML = combined;
 
 }
