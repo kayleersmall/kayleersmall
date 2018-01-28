@@ -1,0 +1,70 @@
+<style>
+#heading{
+  text-align: center;
+  color: white;
+  background-color: #555671;
+  border: 3px solid red;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#heading:hover{
+  text-align: center;
+  color: white;
+  background-color: black;
+  border: 3px solid blue;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.customclass{
+  /*border: 1px solid black;*/
+}
+</style>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="Demo.js"></script>
+    <title>
+      Kaylee's Demo
+    </title>
+  </head>
+  <body>
+
+    <h1 id="heading">Heading goes here</h1>
+    <h2 class="customclass" style="color: blue">Subheading</h2>
+
+    <h2 class="customclass">
+      <a href="marvel/marvel.html">Marvel Characters</a>
+      <!-- <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+      Line above is a link to W3 with link URL and text -->
+    </h2>
+
+
+    <p class="customclass">
+        Paragraph goes here<br>
+
+        mario<br>
+        :3<br>
+        wassup :P<br>
+    </p>
+    <p id="restaurants">
+    </p>
+    <button onclick="ShowRestaurants()" type="button">Show Restaurants</button>
+  </body>
+<form>
+  input1:<br>
+  <input type="text" name="input1" id="input1"><button onclick="getinput1()" type="button">Click Me!</button>
+  <br>
+  input2:<br>
+  <input type="text" name="input2" id="input2">
+</form>
+<p id="Input1Result">
+</p>
+<p id="CombinedResult">
+</p>
+</html>
