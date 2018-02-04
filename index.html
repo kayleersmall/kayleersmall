@@ -18,7 +18,7 @@
     <script>
       console.log(moment().format('l'));
       //Gets current date in format like: 1/27/2018
-      //ToDo: Use to compare date with movie date and decide what movie is featured in jumbotron
+      //TODO: Use to compare date with movie date and decide what movie is featured in jumbotron
     </script>
 
     <script src="index.js"></script>
@@ -54,11 +54,27 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="searchbar" onkeyup="showsearchlist()">
           <button class="btn my-2 my-sm-0" id="searchbutton" type="submit">Search</button>
         </form>
       </div>
     </nav>
+
+    <ul id="searchlist" style="display: none;">
+      <div style="margin-left: 84%;">
+
+      <li><a href="#">Adele</a></li>
+      <li><a href="#">Agnes</a></li>
+
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Cindy</a></li>
+
+      </div>
+    </ul>
 
     <main role="main">
 
