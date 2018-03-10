@@ -1,18 +1,25 @@
 //JSON - like arrays on steroids
-var movies = {
-  "Black Panther" : {
+var movies = [{
+  //"Black Panther" : {
     "title" : "Black Panther",
-    "theatricalrelease" : "2/16/2018"
+    "theatricalrelease" : "2/16/2018",
+    "description" : "Marvel Studios’ “Black Panther” follows T’Challa who, after the death of his father, the King of Wakanda, returns home to the isolated, technologically advanced African nation to succeed to the throne and take his rightful place as king.",
+    "image" : "https://i.ytimg.com/vi/2e52vw7RR-A/maxresdefault.jpg"
   },
-  "Infinity War" : {
+  //"Infinity War" : {
+  {
     "title" : "Avengers: Infinity War",
     "theatricalrelease" : "5/4/2018"
   },
-  "Captain Marvel" : {
+  //"Captain Marvel" : {
+  {
     "title" : "Captain Marvel",
     "theatricalrelease" : "TBA"
-  }
-}
+}];
+
+var TestArray = []; //empty array - more than one item
+
+var TestObject = {}; //empty object - one item
 
 var characters = ["Spider-Boy", "Iron Man", "Hawkeye", "Dr. Strange", "Thor", "Hulk", "Black Panther", "Vision"];
 
@@ -30,13 +37,13 @@ for (var i = 0; i < characters.length; i++) { //Logs entire array from beginning
 
 console.log(movies);
 console.log(moment().format('l'));
-console.log(Object.keys(movies).length);
+// console.log(Object.keys(movies).length);
 
-for(var key in movies) {
-  console.log(movies[key]);
-  console.log(movies[key].title); //logs correctly
-  console.log(movies[key].theatricalrelease);
-}
+// for(var key in movies) {
+//   console.log(movies[key]);
+//   console.log(movies[key].title); //logs correctly
+//   console.log(movies[key].theatricalrelease);
+// }
 
 function showsearchlist(){
   // alert("key was pressed")
