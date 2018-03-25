@@ -9,34 +9,50 @@ var movies = [{
   //"Infinity War" : {
   {
     "title" : "Avengers: Infinity War",
-    "theatricalrelease" : "5/4/2018"
+    "theatricalrelease" : "4/27/2018",
+    "description" : "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos.",
+    "image" : "http://sm.ign.com/ign_latam/screenshot/default/avengers-infinitywar-art-860x450-860x450-c_efps.png"
   },
   //"Captain Marvel" : {
   {
-    "title" : "Captain Marvel",
-    "theatricalrelease" : "TBA"
+    "title" : "Ant-Man and The Wasp",
+    "theatricalrelease" : "7/6/2018",
+    "description" : "From the Marvel Cinematic Universe comes a new chapter featuring heroes with the astonishing ability to shrink: “Ant-Man and The Wasp.”",
+    "image" : ""
 }];
 
 var TestArray = []; //empty array - more than one item
-
 var TestObject = {}; //empty object - one item
 
-var characters = ["Spider-Boy", "Iron Man", "Hawkeye", "Dr. Strange", "Thor", "Hulk", "Black Panther", "Vision"];
+console.log("movies json", movies);
+console.log(moment().format('l'));
+var today = moment().format('l');
 
-console.log(characters)
-
-console.log(characters[0]); //Logs Spider-Boy
-console.log(characters[1]); //Logs Iron Man
-console.log(characters[2]);
-console.log(characters[3]);
-
-for (var i = 0; i < characters.length; i++) { //Logs entire array from beginning to end
-  console.log(characters[i]);
+for (var i = 0; i < movies.length; i++) {
+  console.log("movie object", movies[i]);
+  console.log("Release date for " + movies[i].title + " is " + movies[i].theatricalrelease);
+  var moviedate = movies[i].theatricalrelease;
+  if (moviedate is closer than other moviedates) {
+    show that movie
+  }
 }
 
+// var characters = ["Spider-Boy", "Iron Man", "Hawkeye", "Dr. Strange", "Thor", "Hulk", "Black Panther", "Vision"];
+//
+// console.log(characters)
+//
+// console.log(characters[0]); //Logs Spider-Boy
+// console.log(characters[1]); //Logs Iron Man
+// console.log(characters[2]);
+// console.log(characters[3]);
+//
+// for (var i = 0; i < characters.length; i++) { //Logs entire array from beginning to end
+//   console.log(characters[i]);
+// }
 
-console.log(movies);
-console.log(moment().format('l'));
+
+// console.log(movies);
+
 // console.log(Object.keys(movies).length);
 
 // for(var key in movies) {
