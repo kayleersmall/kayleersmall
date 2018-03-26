@@ -28,14 +28,28 @@ console.log("movies json", movies);
 console.log(moment().format('l'));
 var today = moment().format('l');
 
+var movie = {}; //Variable named 'movie' equals empty object
 for (var i = 0; i < movies.length; i++) {
-  console.log("movie object", movies[i]);
+  // console.log("movie object", movies[i]);
   console.log("Release date for " + movies[i].title + " is " + movies[i].theatricalrelease);
   var moviedate = movies[i].theatricalrelease;
-  if (moviedate is closer than other moviedates) {
-    show that movie
-  }
+  console.log("movie object", movie); //Logs variable named 'movie' from ln 31 which is an empty object
+  //if (movies[i].theatricalrelease - today) {
+    //show that movie on homepage
+  //}
+
+  var momenttoday = moment(moment().format('l'));
+  //var testdate = "4/27/2018";
+  //var momenttestdate = moment(testdate).format('M/D/YYYY');
+  var momenttestdate = moment(movies[i].theatricalrelease).format('M/D/YYYY');
+  console.log(momenttestdate);
+  console.log(momenttoday.diff(momenttestdate));
+
+  movie = movies[i];
+  console.log("movie object", movie); // Now filled with object from movies object array
 }
+
+document.getElementById("title").innerHTML = movies[0].title;
 
 // var characters = ["Spider-Boy", "Iron Man", "Hawkeye", "Dr. Strange", "Thor", "Hulk", "Black Panther", "Vision"];
 //

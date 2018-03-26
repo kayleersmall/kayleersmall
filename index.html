@@ -21,7 +21,7 @@
       //TODO: Use to compare date with movie date and decide what movie is featured in jumbotron
     </script>
 
-    <script src="index.js"></script>
+    <!--<script src="index.js"></script> MOVED AT BOTTOM SO JS LOADS AFTER HTML INSTEAD BEFORE-->
 
   </head>
 
@@ -81,7 +81,7 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container" id="jumbotrontext">
-          <h1 class="display-3">Black Panther</h1>
+          <h1 class="display-3" id="title"></h1>
           <p>Marvel Studios’ “Black Panther” follows T’Challa who, after the death of his father, the King of Wakanda, returns home to the isolated, technologically advanced African nation to succeed to the throne and take his rightful place as king.</p>
           <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
         </div>
@@ -172,6 +172,7 @@
 
     </main>
 
+    <script src="index.js"></script>
     <!-- <footer class="container">
       <p>&copy; Company 2017-2018</p>
     </footer> -->
