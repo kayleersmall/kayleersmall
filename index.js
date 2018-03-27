@@ -29,6 +29,7 @@ console.log(moment().format('l'));
 var today = moment().format('l');
 
 var movie = {}; //Variable named 'movie' equals empty object
+var closestmovie = {};
 for (var i = 0; i < movies.length; i++) {
   // console.log("movie object", movies[i]);
   console.log("Release date for " + movies[i].title + " is " + movies[i].theatricalrelease);
@@ -38,18 +39,33 @@ for (var i = 0; i < movies.length; i++) {
     //show that movie on homepage
   //}
 
-  var momenttoday = moment(moment().format('l'));
+  var momenttoday = moment(moment().format('l')); //Need moment(...) to make Moment object; otherwise shows as NaN
   //var testdate = "4/27/2018";
   //var momenttestdate = moment(testdate).format('M/D/YYYY');
-  var momenttestdate = moment(movies[i].theatricalrelease).format('M/D/YYYY');
+  var momenttestdate = moment(movies[i].theatricalrelease).format('M/D/YYYY'); //Converts movie release date to Moment object with same format used in movies object array / JSON
   console.log(momenttestdate);
-  console.log(momenttoday.diff(momenttestdate));
+  var difference = momenttoday.diff(momenttestdate); //Gets difference between momenttoday and momenttestdate in milliseconds
+  var absolutedifference = Math.abs(difference) //Converts difference to absolute value (no negatives)
+  console.log("Difference", difference);
+  console.log("Absoluteddifference " + movies[i].title, absolutedifference);
 
-  movie = movies[i];
-  console.log("movie object", movie); // Now filled with object from movies object array
+  // movie = movies[i];
+  // console.log("movie object", movie); // Now filled with object from movies object array
+
+   if (absolutedifference < closestmovie || Object.keys(closestmovie).length === 0 && closestmovie.constructor === Object){
+   // console.log(absolutedifference + "<" + closestmovie);
+    closestmovie = absolutedifference;
+   // console.log(closestmovie);
+   movie = movies[i]; //IF movie currenlty being looped over is closer than the movie already stored in closestmovie object, this is the new closest movie
+   console.log("Closestmovie ", movie)
+  }
 }
 
-document.getElementById("title").innerHTML = movies[0].title;
+console.log(movie.title, movie.theatricalrelease)
+
+document.getElementById("title").innerHTML = movie.title;
+document.getElementById("description").innerHTML = movie.description;
+document.getElementById("jumbotron").style.backgroundImage = "url(" + movie.image + ")";
 
 // var characters = ["Spider-Boy", "Iron Man", "Hawkeye", "Dr. Strange", "Thor", "Hulk", "Black Panther", "Vision"];
 //
