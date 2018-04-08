@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<!-- REVIEW: Above line is required to fix issues with quotes appearing as â€™, etc.-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="movie.css" rel="stylesheet">
+<script src="index.js"></script>
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" id="title"></h5>
+      <h6 class="card-subtitle mb-2 text-muted" id="release"></h6>
+      <p class="card-text" id="description"></p>
+    </div>
+    <img class="card-img-bottom" id="image">
+  </div>
+</div>
+<script src="movie.js"></script>
+<!-- REVIEW: movie.js has to be at end of file so HTML with ids loads before JS looks for ids on Ln 23 - 26 -->
