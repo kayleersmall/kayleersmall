@@ -1,6 +1,15 @@
 /* #IDname{}
 .classname{} */
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
+
+.searchicon {
+  color: white;
+}
+
+.searchicon: hover{
+  color: white !important;
+}
+
 body {
   padding-top: 3.5rem;
 }
