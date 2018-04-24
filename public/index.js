@@ -60,8 +60,8 @@ for (var i = 0; i < movies.length; i++) {
 
   var link = document.createElement("A");                                             // Create a <a> node
   var textnode = document.createTextNode(movies[i].title);                            // Add movie title to each link
-  link.appendChild(textnode);                                                         // Append the text to <li>
-  document.getElementById("bootstraplistgroup").appendChild(link);                    // Append <li> to <ul> with id="myList"
+  link.appendChild(textnode);                                                         // Append the text to <a>
+  document.getElementById("bootstraplistgroup").appendChild(link);                    // Append <a> to <modal> with id="bootstraplistgroup"
   link.className = "list-group-item";                                                 // Adds list-group-item class to link variable
   link.setAttribute('href', "movie.html?id=" + movies.indexOf(movies[i]))                  // Sets each link's href as link with movies index
   console.log("Index for " + movies[i].title + " is " + movies.indexOf(movies[i]));   // Logs index of each item
@@ -72,8 +72,14 @@ console.log(movie.title, movie.theatricalrelease)
 
 document.getElementById("title").innerHTML = movie.title;
 document.getElementById("description").innerHTML = movie.description;
-document.getElementById("jumbotron").style.backgroundImage = "url(" + movie.image + ")";
+// document.getElementById("jumbotron").style.backgroundImage = "url(" + movie.image + ")";
+// REVIEW: getElementById - JS looks for ID in the HTML; innerHTML - Replaces text
+// REVIEW: When combined - Replace text for the ID given
 
+document.getElementById("card-img").src = movie.image;
+movie.index_ABC = movies.findIndex(x => x.title==movie.title) //GETTING INDEX OF CLOSEST MOVIE TITLE AFTER ABC ORDER IS APPLIED
+console.log(movie);
+document.getElementById("card-href").setAttribute('href', "movie.html?id=" + movie.index_ABC)
 
 function filterFunction() {
     var input, filter, div, ul, li, a, i;
@@ -89,4 +95,15 @@ function filterFunction() {
           a[i].style.display = "none";
       }
     }
-  }
+}
+
+// if (window.innerWidth <= 414) {
+//   document.getElementById("card-img").classList.add("card-img-bottom")
+if (window.innerWidth < 1366) {
+  document.getElementById("card").classList.remove("flex-md-row")
+  document.getElementById("card").classList.add("flex-md")
+  // document.getElementById("card-img").classList.add("card-img-right")
+  // document.getElementById("card-img").classList.add("flex-auto")
+  // document.getElementById("card-img").classList.add("d-none")
+  // document.getElementById("card-img").classList.add("d-sm-block")
+}
